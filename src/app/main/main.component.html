@@ -1,9 +1,19 @@
+<!--Display current date-->
 <h1>{{month}} {{day}}</h1>
 
+<!--Clock in/clock out buttons-->
 <button [disabled]="working" type="button" class="btn btn-success btn-block" (click)="clockIn()">Clock In</button>
-<p *ngIf="working">You clocked in at: {{clockInTime}}</p>
+<p *ngIf="on">You clocked in at: {{clockInTime}}</p>
 
 <button [disabled]="!working" type="button" class="btn btn-danger btn-block" (click)="clockOut()">Clock Out</button>
 <p *ngIf="off">You clocked in at: {{clockOutTime}}</p>
-<p *ngIf="off">You worked for: {{hoursWorked}}</p>
+<p *ngIf="off">You worked for: {{hoursWorked}} hours</p>
+
+<!--Display time sheet-->
+<h2>Time Card</h2>
+
+<div class="row">
+  <div class="col">1</div>
+  <div class="col">2</div>
+</div>
 
